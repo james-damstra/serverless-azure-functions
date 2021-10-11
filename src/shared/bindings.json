@@ -20,6 +20,74 @@
   },
   "bindings": [
     {
+      "type": "orchestrationTrigger",
+      "displayName": "orchestrationTrigger",
+      "direction": "in",
+      "settings": [
+        {
+          "name": "name",
+          "value": "string",
+          "defaultValue": "data",
+          "required": true,
+          "label": "$orchestrationTrigger_name_label",
+          "help": "$orchestrationTrigger_name_help",
+          "validators": [
+            {
+              "expression": "^[a-zA-Z][a-zA-Z0-9]{0,127}$",
+              "errorText": "[variables('parameterName')]"
+            }
+          ]
+        },
+        {
+          "name": "orchestration",
+          "value": "string",
+          "required": false,
+          "label": "$orchestrationTrigger_orchestration_label",
+          "help": "$orchestrationTrigger_orchestration_help",
+          "validators": [
+            {
+              "expression": "^[a-zA-Z][a-zA-Z0-9]{0,127}$",
+              "errorText": "[variables('parameterName')]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "activityTrigger",
+      "displayName": "activityTrigger",
+      "direction": "in",
+      "settings": [
+        {
+          "name": "name",
+          "value": "string",
+          "defaultValue": "data",
+          "required": true,
+          "label": "$activityTrigger_name_label",
+          "help": "$activityTrigger_name_help",
+          "validators": [
+            {
+              "expression": "^[a-zA-Z][a-zA-Z0-9]{0,127}$",
+              "errorText": "[variables('parameterName')]"
+            }
+          ]
+        },
+        {
+          "name": "activity",
+          "value": "string",
+          "required": false,
+          "label": "$activityTrigger_activity_label",
+          "help": "$activityTrigger_activity_help",
+          "validators": [
+            {
+              "expression": "^[a-zA-Z][a-zA-Z0-9]{0,127}$",
+              "errorText": "[variables('parameterName')]"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "type": "timerTrigger",
       "displayName": "$timerTrigger_displayName",
       "direction": "trigger",
